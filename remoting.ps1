@@ -4,9 +4,9 @@ Install-Module ISHRemote -Repository PSGallery -Scope CurrentUser -Force
 get-module -ListAvailable -name ISHRemote
 
 #access commands
-$devsession = New-IshSession -WsBaseUrl "https://ccms-dev.us.oracle.com/infosharews" -PSCredential "Martin Cevallos"
-$intsession = New-IshSession -WsBaseUrl "https://ccms-int.us.oracle.com/infosharews" -PSCredential "Martin Cevallos"
-$prodsession = New-IshSession -WsBaseUrl "https://ccms.us.oracle.com/infosharews" -PSCredential "Martin Cevallos"
+$devsession = New-IshSession -WsBaseUrl "https://domain/app" -PSCredential "Martin Cevallos"
+$intsession = New-IshSession -WsBaseUrl "https://domain/app" -PSCredential "Martin Cevallos"
+$prodsession = New-IshSession -WsBaseUrl "https://domain/app" -PSCredential "Martin Cevallos"
 
 #getting fields for users given filter
 $rmeta = $rmeta | Set-IshRequestedMetadataField -IshSession $devsession -Name "FISHUSERROLES" -Level None
